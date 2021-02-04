@@ -90,9 +90,10 @@ function cli(args) {
     )
     .parse(args);
 
-  if (program.saveSequence) saveSequence(program, sequencer);
-  else if (program.installModule) installModule(program, sequencer);
-  else parseSteps(program);
+  const options = program.opts();
+  if (options.saveSequence) saveSequence(options, sequencer);
+  else if (options.installModule) installModule(options, sequencer);
+  else parseSteps(options);
 }
 
 module.exports = cli;
