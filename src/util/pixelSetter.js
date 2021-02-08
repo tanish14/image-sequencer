@@ -1,8 +1,8 @@
 /**  
  * @param {number} x x-coordinate.
  * @param {number} y y-coordinate.
- * @param {object} value
- * @param {number} pixel
+ * @param {object} value array [r, g, b, a]
+ * param {object} pixels NDarray of pixels.
  * @description Sets the pixels from 0 through length of value. 
 */
 module.exports = function(x, y, value, pixels){
